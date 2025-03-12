@@ -1,0 +1,1994 @@
+{
+  "tenant_id": {
+    "x-build-in": true,
+    "description": "租户ID",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Number"
+    },
+    "type": "int64",
+    "x-ui-component": {
+      "default": {
+        "description": "输入框-整数校验",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "租户ID",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": true
+  },
+  "gmt_create": {
+    "x-build-in": true,
+    "description": "创建时间",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "DateTime"
+    },
+    "type": "timestamp",
+    "x-ui-component": {
+      "default": {
+        "description": "日期时间",
+        "componentName": "DateField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "DateField",
+            "zh_CN": "创建时间",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": true
+  },
+  "issue_authority": {
+    "description": "发证机构",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Text"
+    },
+    "type": "string",
+    "x-ui-component": {
+      "default": {
+        "description": "单行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "发证机构",
+            "type": "i18n"
+          }
+        }
+      },
+      "Select": {
+        "description": "下拉单选",
+        "componentName": "SelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "SelectField",
+            "zh_CN": "发证机构",
+            "type": "i18n"
+          }
+        }
+      },
+      "TreeSelect": {
+        "description": "树形单选",
+        "componentName": "TreeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TreeSelectField",
+            "zh_CN": "发证机构",
+            "type": "i18n"
+          }
+        }
+      },
+      "Radio": {
+        "description": "单选",
+        "componentName": "RadioField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "RadioField",
+            "zh_CN": "发证机构",
+            "type": "i18n"
+          }
+        }
+      },
+      "CascadeSelect": {
+        "description": "级联单选",
+        "componentName": "CascadeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "CascadeSelect",
+            "zh_CN": "发证机构",
+            "type": "i18n"
+          }
+        }
+      },
+      "LongText": {
+        "description": "多行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "发证机构",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "develop_completed_date": {
+    "description": "开发完成日期",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Date"
+    },
+    "type": "timestamp",
+    "x-uipaas-type": "$Date",
+    "x-ui-component": {
+      "default": {
+        "description": "日期",
+        "componentName": "DateField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "DateField",
+            "zh_CN": "开发完成日期",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "develop_type_full": {
+    "description": "开发方式长路径",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Text"
+    },
+    "type": "string",
+    "x-ui-component": {
+      "default": {
+        "description": "单行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "开发方式长路径",
+            "type": "i18n"
+          }
+        }
+      },
+      "Select": {
+        "description": "下拉单选",
+        "componentName": "SelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "SelectField",
+            "zh_CN": "开发方式长路径",
+            "type": "i18n"
+          }
+        }
+      },
+      "TreeSelect": {
+        "description": "树形单选",
+        "componentName": "TreeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TreeSelectField",
+            "zh_CN": "开发方式长路径",
+            "type": "i18n"
+          }
+        }
+      },
+      "Radio": {
+        "description": "单选",
+        "componentName": "RadioField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "RadioField",
+            "zh_CN": "开发方式长路径",
+            "type": "i18n"
+          }
+        }
+      },
+      "CascadeSelect": {
+        "description": "级联单选",
+        "componentName": "CascadeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "CascadeSelect",
+            "zh_CN": "开发方式长路径",
+            "type": "i18n"
+          }
+        }
+      },
+      "LongText": {
+        "description": "多行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "开发方式长路径",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "mdc_ext": {
+    "x-build-in": true,
+    "description": "元数据扩展列",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Text"
+    },
+    "type": "string",
+    "x-ui-component": {
+      "default": {
+        "description": "单行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "元数据扩展列",
+            "type": "i18n"
+          }
+        }
+      },
+      "Select": {
+        "description": "下拉单选",
+        "componentName": "SelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "SelectField",
+            "zh_CN": "元数据扩展列",
+            "type": "i18n"
+          }
+        }
+      },
+      "TreeSelect": {
+        "description": "树形单选",
+        "componentName": "TreeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TreeSelectField",
+            "zh_CN": "元数据扩展列",
+            "type": "i18n"
+          }
+        }
+      },
+      "Radio": {
+        "description": "单选",
+        "componentName": "RadioField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "RadioField",
+            "zh_CN": "元数据扩展列",
+            "type": "i18n"
+          }
+        }
+      },
+      "CascadeSelect": {
+        "description": "级联单选",
+        "componentName": "CascadeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "CascadeSelect",
+            "zh_CN": "元数据扩展列",
+            "type": "i18n"
+          }
+        }
+      },
+      "LongText": {
+        "description": "多行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "元数据扩展列",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "register_no": {
+    "description": "登记号",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Text"
+    },
+    "type": "string",
+    "x-ui-component": {
+      "default": {
+        "description": "单行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "登记号",
+            "type": "i18n"
+          }
+        }
+      },
+      "Select": {
+        "description": "下拉单选",
+        "componentName": "SelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "SelectField",
+            "zh_CN": "登记号",
+            "type": "i18n"
+          }
+        }
+      },
+      "TreeSelect": {
+        "description": "树形单选",
+        "componentName": "TreeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TreeSelectField",
+            "zh_CN": "登记号",
+            "type": "i18n"
+          }
+        }
+      },
+      "Radio": {
+        "description": "单选",
+        "componentName": "RadioField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "RadioField",
+            "zh_CN": "登记号",
+            "type": "i18n"
+          }
+        }
+      },
+      "CascadeSelect": {
+        "description": "级联单选",
+        "componentName": "CascadeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "CascadeSelect",
+            "zh_CN": "登记号",
+            "type": "i18n"
+          }
+        }
+      },
+      "LongText": {
+        "description": "多行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "登记号",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "modifier": {
+    "x-build-in": true,
+    "description": "修改者",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "AliEmployee"
+    },
+    "type": "object",
+    "x-uipaas-type": "$ModelDrivenEmployee",
+    "x-ui-component": {
+      "default": {
+        "description": "人员搜索框",
+        "componentName": "EmployeeField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "Employee Field",
+            "zh_CN": "修改者",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": true
+  },
+  "develop_type": {
+    "description": "开发方式",
+    "x-aecp": {
+      "optionDefSrcType": "custom",
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "optionDefCode": "develop_type",
+      "typeCat": "BASIC",
+      "busiType": "SelectSingle"
+    },
+    "type": "object",
+    "x-uipaas-type": "$ModelDrivenSelectSingle",
+    "x-ui-component": {
+      "default": {
+        "description": "下拉选择",
+        "componentName": "ModelDrivenSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "开发方式",
+            "zh_CN": "开发方式",
+            "type": "i18n"
+          }
+        }
+      },
+      "Ratio": {
+        "description": "单选",
+        "componentName": "ModelDrivenRadioField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "开发方式",
+            "zh_CN": "开发方式",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "pageSize": {
+    "description": "分页大小",
+    "x-param-biz-type": "pageSize",
+    "type": "int64",
+    "x-ui-component": {
+      "default": {
+        "description": "输入框-整数校验",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "分页大小",
+            "type": "i18n"
+          }
+        }
+      }
+    }
+  },
+  "remark": {
+    "description": "备注",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "LongText"
+    },
+    "type": "string",
+    "x-uipaas-type": "$Textarea",
+    "x-ui-component": {
+      "default": {
+        "description": "多行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "备注",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "gmt_modified": {
+    "x-build-in": true,
+    "description": "修改时间",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "DateTime"
+    },
+    "type": "timestamp",
+    "x-ui-component": {
+      "default": {
+        "description": "日期时间",
+        "componentName": "DateField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "DateField",
+            "zh_CN": "修改时间",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": true
+  },
+  "public_url": {
+    "description": "软件发布地址",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Text"
+    },
+    "type": "string",
+    "x-ui-component": {
+      "default": {
+        "description": "单行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "软件发布地址",
+            "type": "i18n"
+          }
+        }
+      },
+      "Select": {
+        "description": "下拉单选",
+        "componentName": "SelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "SelectField",
+            "zh_CN": "软件发布地址",
+            "type": "i18n"
+          }
+        }
+      },
+      "TreeSelect": {
+        "description": "树形单选",
+        "componentName": "TreeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TreeSelectField",
+            "zh_CN": "软件发布地址",
+            "type": "i18n"
+          }
+        }
+      },
+      "Radio": {
+        "description": "单选",
+        "componentName": "RadioField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "RadioField",
+            "zh_CN": "软件发布地址",
+            "type": "i18n"
+          }
+        }
+      },
+      "CascadeSelect": {
+        "description": "级联单选",
+        "componentName": "CascadeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "CascadeSelect",
+            "zh_CN": "软件发布地址",
+            "type": "i18n"
+          }
+        }
+      },
+      "LongText": {
+        "description": "多行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "软件发布地址",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "is_deleted": {
+    "x-build-in": true,
+    "description": "逻辑删除",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Text"
+    },
+    "type": "string",
+    "x-ui-component": {
+      "default": {
+        "description": "单行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "逻辑删除",
+            "type": "i18n"
+          }
+        }
+      },
+      "Select": {
+        "description": "下拉单选",
+        "componentName": "SelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "SelectField",
+            "zh_CN": "逻辑删除",
+            "type": "i18n"
+          }
+        }
+      },
+      "TreeSelect": {
+        "description": "树形单选",
+        "componentName": "TreeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TreeSelectField",
+            "zh_CN": "逻辑删除",
+            "type": "i18n"
+          }
+        }
+      },
+      "Radio": {
+        "description": "单选",
+        "componentName": "RadioField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "RadioField",
+            "zh_CN": "逻辑删除",
+            "type": "i18n"
+          }
+        }
+      },
+      "CascadeSelect": {
+        "description": "级联单选",
+        "componentName": "CascadeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "CascadeSelect",
+            "zh_CN": "逻辑删除",
+            "type": "i18n"
+          }
+        }
+      },
+      "LongText": {
+        "description": "多行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "逻辑删除",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": true
+  },
+  "extend_data": {
+    "x-extend-type": "extendData",
+    "x-build-in": true,
+    "description": "扩展信息",
+    "type": "object",
+    "x-ui-component": {
+      "TimeRange": {
+        "description": "时间日期区间",
+        "componentName": "CascadeDateField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "CascadeDateField",
+            "zh_CN": "扩展信息",
+            "type": "i18n"
+          }
+        }
+      },
+      "default": {
+        "description": "下拉单选",
+        "componentName": "SelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "SelectField",
+            "zh_CN": "扩展信息",
+            "type": "i18n"
+          }
+        }
+      },
+      "AliEmployee": {
+        "description": "人员搜索框",
+        "componentName": "EmployeeField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "Employee Field",
+            "zh_CN": "扩展信息",
+            "type": "i18n"
+          }
+        }
+      },
+      "MoneyRange": {
+        "description": "金额区间带币种",
+        "componentName": "MoneyRangeField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "MoneyInputField",
+            "zh_CN": "扩展信息",
+            "type": "i18n"
+          }
+        }
+      },
+      "MoneyCurrency": {
+        "description": "金额带币种",
+        "componentName": "MoneyInputField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "MoneyInputField",
+            "zh_CN": "扩展信息",
+            "type": "i18n"
+          }
+        }
+      }
+    }
+  },
+  "issue_date": {
+    "description": "发证日期",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Date"
+    },
+    "type": "timestamp",
+    "x-uipaas-type": "$Date",
+    "x-ui-component": {
+      "default": {
+        "description": "日期",
+        "componentName": "DateField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "DateField",
+            "zh_CN": "发证日期",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "vender_name": {
+    "description": "代理机构",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Text"
+    },
+    "type": "string",
+    "x-ui-component": {
+      "default": {
+        "description": "单行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "代理机构",
+            "type": "i18n"
+          }
+        }
+      },
+      "Select": {
+        "description": "下拉单选",
+        "componentName": "SelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "SelectField",
+            "zh_CN": "代理机构",
+            "type": "i18n"
+          }
+        }
+      },
+      "TreeSelect": {
+        "description": "树形单选",
+        "componentName": "TreeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TreeSelectField",
+            "zh_CN": "代理机构",
+            "type": "i18n"
+          }
+        }
+      },
+      "Radio": {
+        "description": "单选",
+        "componentName": "RadioField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "RadioField",
+            "zh_CN": "代理机构",
+            "type": "i18n"
+          }
+        }
+      },
+      "CascadeSelect": {
+        "description": "级联单选",
+        "componentName": "CascadeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "CascadeSelect",
+            "zh_CN": "代理机构",
+            "type": "i18n"
+          }
+        }
+      },
+      "LongText": {
+        "description": "多行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "代理机构",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "first_publish_date": {
+    "description": "首次发表日期",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Date"
+    },
+    "type": "timestamp",
+    "x-uipaas-type": "$Date",
+    "x-ui-component": {
+      "default": {
+        "description": "日期",
+        "componentName": "DateField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "DateField",
+            "zh_CN": "首次发表日期",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "id": {
+    "x-build-in": true,
+    "description": "ID",
+    "x-param-biz-type": "id",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Number"
+    },
+    "type": "int64",
+    "x-ui-component": {
+      "default": {
+        "description": "输入框-整数校验",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "ID",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": true
+  },
+  "software_name": {
+    "description": "软件全称及版本号",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Text"
+    },
+    "type": "string",
+    "x-ui-component": {
+      "default": {
+        "description": "单行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "软件全称及版本号",
+            "type": "i18n"
+          }
+        }
+      },
+      "Select": {
+        "description": "下拉单选",
+        "componentName": "SelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "SelectField",
+            "zh_CN": "软件全称及版本号",
+            "type": "i18n"
+          }
+        }
+      },
+      "TreeSelect": {
+        "description": "树形单选",
+        "componentName": "TreeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TreeSelectField",
+            "zh_CN": "软件全称及版本号",
+            "type": "i18n"
+          }
+        }
+      },
+      "Radio": {
+        "description": "单选",
+        "componentName": "RadioField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "RadioField",
+            "zh_CN": "软件全称及版本号",
+            "type": "i18n"
+          }
+        }
+      },
+      "CascadeSelect": {
+        "description": "级联单选",
+        "componentName": "CascadeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "CascadeSelect",
+            "zh_CN": "软件全称及版本号",
+            "type": "i18n"
+          }
+        }
+      },
+      "LongText": {
+        "description": "多行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "软件全称及版本号",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "current_status_full": {
+    "description": "当前状态长路径",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Text"
+    },
+    "type": "string",
+    "x-ui-component": {
+      "default": {
+        "description": "单行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "当前状态长路径",
+            "type": "i18n"
+          }
+        }
+      },
+      "Select": {
+        "description": "下拉单选",
+        "componentName": "SelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "SelectField",
+            "zh_CN": "当前状态长路径",
+            "type": "i18n"
+          }
+        }
+      },
+      "TreeSelect": {
+        "description": "树形单选",
+        "componentName": "TreeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TreeSelectField",
+            "zh_CN": "当前状态长路径",
+            "type": "i18n"
+          }
+        }
+      },
+      "Radio": {
+        "description": "单选",
+        "componentName": "RadioField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "RadioField",
+            "zh_CN": "当前状态长路径",
+            "type": "i18n"
+          }
+        }
+      },
+      "CascadeSelect": {
+        "description": "级联单选",
+        "componentName": "CascadeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "CascadeSelect",
+            "zh_CN": "当前状态长路径",
+            "type": "i18n"
+          }
+        }
+      },
+      "LongText": {
+        "description": "多行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "当前状态长路径",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "creator": {
+    "x-build-in": true,
+    "description": "创建者",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "AliEmployee"
+    },
+    "type": "object",
+    "x-uipaas-type": "$ModelDrivenEmployee",
+    "x-ui-component": {
+      "default": {
+        "description": "人员搜索框",
+        "componentName": "EmployeeField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "Employee Field",
+            "zh_CN": "创建者",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": true
+  },
+  "change_cert_no": {
+    "description": "变更证书编号",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Text"
+    },
+    "type": "string",
+    "x-ui-component": {
+      "default": {
+        "description": "单行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "变更证书编号",
+            "type": "i18n"
+          }
+        }
+      },
+      "Select": {
+        "description": "下拉单选",
+        "componentName": "SelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "SelectField",
+            "zh_CN": "变更证书编号",
+            "type": "i18n"
+          }
+        }
+      },
+      "TreeSelect": {
+        "description": "树形单选",
+        "componentName": "TreeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TreeSelectField",
+            "zh_CN": "变更证书编号",
+            "type": "i18n"
+          }
+        }
+      },
+      "Radio": {
+        "description": "单选",
+        "componentName": "RadioField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "RadioField",
+            "zh_CN": "变更证书编号",
+            "type": "i18n"
+          }
+        }
+      },
+      "CascadeSelect": {
+        "description": "级联单选",
+        "componentName": "CascadeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "CascadeSelect",
+            "zh_CN": "变更证书编号",
+            "type": "i18n"
+          }
+        }
+      },
+      "LongText": {
+        "description": "多行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "变更证书编号",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "cert_no": {
+    "description": "证书号",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Text"
+    },
+    "type": "string",
+    "x-ui-component": {
+      "default": {
+        "description": "单行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "证书号",
+            "type": "i18n"
+          }
+        }
+      },
+      "Select": {
+        "description": "下拉单选",
+        "componentName": "SelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "SelectField",
+            "zh_CN": "证书号",
+            "type": "i18n"
+          }
+        }
+      },
+      "TreeSelect": {
+        "description": "树形单选",
+        "componentName": "TreeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TreeSelectField",
+            "zh_CN": "证书号",
+            "type": "i18n"
+          }
+        }
+      },
+      "Radio": {
+        "description": "单选",
+        "componentName": "RadioField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "RadioField",
+            "zh_CN": "证书号",
+            "type": "i18n"
+          }
+        }
+      },
+      "CascadeSelect": {
+        "description": "级联单选",
+        "componentName": "CascadeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "CascadeSelect",
+            "zh_CN": "证书号",
+            "type": "i18n"
+          }
+        }
+      },
+      "LongText": {
+        "description": "多行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "证书号",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "copyright_obtaining_full": {
+    "description": "权利取得方式长路径",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Text"
+    },
+    "type": "string",
+    "x-ui-component": {
+      "default": {
+        "description": "单行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "权利取得方式长路径",
+            "type": "i18n"
+          }
+        }
+      },
+      "Select": {
+        "description": "下拉单选",
+        "componentName": "SelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "SelectField",
+            "zh_CN": "权利取得方式长路径",
+            "type": "i18n"
+          }
+        }
+      },
+      "TreeSelect": {
+        "description": "树形单选",
+        "componentName": "TreeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TreeSelectField",
+            "zh_CN": "权利取得方式长路径",
+            "type": "i18n"
+          }
+        }
+      },
+      "Radio": {
+        "description": "单选",
+        "componentName": "RadioField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "RadioField",
+            "zh_CN": "权利取得方式长路径",
+            "type": "i18n"
+          }
+        }
+      },
+      "CascadeSelect": {
+        "description": "级联单选",
+        "componentName": "CascadeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "CascadeSelect",
+            "zh_CN": "权利取得方式长路径",
+            "type": "i18n"
+          }
+        }
+      },
+      "LongText": {
+        "description": "多行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "权利取得方式长路径",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "domain_code": {
+    "x-build-in": true,
+    "description": "域CODE",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Text"
+    },
+    "type": "string",
+    "x-ui-component": {
+      "default": {
+        "description": "单行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "域CODE",
+            "type": "i18n"
+          }
+        }
+      },
+      "Select": {
+        "description": "下拉单选",
+        "componentName": "SelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "SelectField",
+            "zh_CN": "域CODE",
+            "type": "i18n"
+          }
+        }
+      },
+      "TreeSelect": {
+        "description": "树形单选",
+        "componentName": "TreeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TreeSelectField",
+            "zh_CN": "域CODE",
+            "type": "i18n"
+          }
+        }
+      },
+      "Radio": {
+        "description": "单选",
+        "componentName": "RadioField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "RadioField",
+            "zh_CN": "域CODE",
+            "type": "i18n"
+          }
+        }
+      },
+      "CascadeSelect": {
+        "description": "级联单选",
+        "componentName": "CascadeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "CascadeSelect",
+            "zh_CN": "域CODE",
+            "type": "i18n"
+          }
+        }
+      },
+      "LongText": {
+        "description": "多行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "域CODE",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": true
+  },
+  "copyright_obtaining": {
+    "description": "权利取得方式",
+    "x-aecp": {
+      "optionDefSrcType": "custom",
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "optionDefCode": "copyright_obtaining",
+      "typeCat": "BASIC",
+      "busiType": "SelectSingle"
+    },
+    "type": "object",
+    "x-uipaas-type": "$ModelDrivenSelectSingle",
+    "x-ui-component": {
+      "default": {
+        "description": "下拉选择",
+        "componentName": "ModelDrivenSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "权利取得方式",
+            "zh_CN": "权利取得方式",
+            "type": "i18n"
+          }
+        }
+      },
+      "Ratio": {
+        "description": "单选",
+        "componentName": "ModelDrivenRadioField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "权利取得方式",
+            "zh_CN": "权利取得方式",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "abbreviation": {
+    "description": "简称",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Text"
+    },
+    "type": "string",
+    "x-ui-component": {
+      "default": {
+        "description": "单行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "简称",
+            "type": "i18n"
+          }
+        }
+      },
+      "Select": {
+        "description": "下拉单选",
+        "componentName": "SelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "SelectField",
+            "zh_CN": "简称",
+            "type": "i18n"
+          }
+        }
+      },
+      "TreeSelect": {
+        "description": "树形单选",
+        "componentName": "TreeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TreeSelectField",
+            "zh_CN": "简称",
+            "type": "i18n"
+          }
+        }
+      },
+      "Radio": {
+        "description": "单选",
+        "componentName": "RadioField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "RadioField",
+            "zh_CN": "简称",
+            "type": "i18n"
+          }
+        }
+      },
+      "CascadeSelect": {
+        "description": "级联单选",
+        "componentName": "CascadeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "CascadeSelect",
+            "zh_CN": "简称",
+            "type": "i18n"
+          }
+        }
+      },
+      "LongText": {
+        "description": "多行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "简称",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "copyright_owner": {
+    "description": "著作权人",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Company"
+    },
+    "type": "object",
+    "x-uipaas-type": "$Company",
+    "x-ui-component": {
+      "default": {
+        "description": "公司选择",
+        "componentName": "LegalCompanySelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "著作权人",
+            "zh_CN": "著作权人",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "right_certificate": {
+    "description": "权利证书",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "File"
+    },
+    "type": "array",
+    "x-uipaas-type": "$ModelDrivenFile",
+    "items": {
+      "type": "object"
+    },
+    "x-ui-component": {
+      "default": {
+        "description": "文件上传",
+        "componentName": "AttachmentField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "Upload attachment",
+            "zh_CN": "权利证书",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "business_tree": {
+    "description": "品牌业务树",
+    "x-aecp": {
+      "dictOptionType": "brand_business_tree",
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Dict",
+      "dictDomain": "altun"
+    },
+    "type": "string",
+    "x-uipaas-type": "$DataDict",
+    "x-ui-component": {
+      "default": {
+        "description": "数据字典",
+        "componentName": "LegalDataDictionaryField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "品牌业务树",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "attribution_business": {
+    "description": "归属业务",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Text"
+    },
+    "type": "string",
+    "x-ui-component": {
+      "default": {
+        "description": "单行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "归属业务",
+            "type": "i18n"
+          }
+        }
+      },
+      "Select": {
+        "description": "下拉单选",
+        "componentName": "SelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "SelectField",
+            "zh_CN": "归属业务",
+            "type": "i18n"
+          }
+        }
+      },
+      "TreeSelect": {
+        "description": "树形单选",
+        "componentName": "TreeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TreeSelectField",
+            "zh_CN": "归属业务",
+            "type": "i18n"
+          }
+        }
+      },
+      "Radio": {
+        "description": "单选",
+        "componentName": "RadioField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "RadioField",
+            "zh_CN": "归属业务",
+            "type": "i18n"
+          }
+        }
+      },
+      "CascadeSelect": {
+        "description": "级联单选",
+        "componentName": "CascadeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "CascadeSelect",
+            "zh_CN": "归属业务",
+            "type": "i18n"
+          }
+        }
+      },
+      "LongText": {
+        "description": "多行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "归属业务",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "co_owner": {
+    "description": "共有人",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Text"
+    },
+    "type": "string",
+    "x-ui-component": {
+      "default": {
+        "description": "单行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "共有人",
+            "type": "i18n"
+          }
+        }
+      },
+      "Select": {
+        "description": "下拉单选",
+        "componentName": "SelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "SelectField",
+            "zh_CN": "共有人",
+            "type": "i18n"
+          }
+        }
+      },
+      "TreeSelect": {
+        "description": "树形单选",
+        "componentName": "TreeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TreeSelectField",
+            "zh_CN": "共有人",
+            "type": "i18n"
+          }
+        }
+      },
+      "Radio": {
+        "description": "单选",
+        "componentName": "RadioField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "RadioField",
+            "zh_CN": "共有人",
+            "type": "i18n"
+          }
+        }
+      },
+      "CascadeSelect": {
+        "description": "级联单选",
+        "componentName": "CascadeSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "CascadeSelect",
+            "zh_CN": "共有人",
+            "type": "i18n"
+          }
+        }
+      },
+      "LongText": {
+        "description": "多行文本",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "共有人",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "current_status": {
+    "description": "当前状态",
+    "x-aecp": {
+      "optionDefSrcType": "custom",
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "optionDefCode": "copyright_status",
+      "typeCat": "BASIC",
+      "busiType": "SelectSingle"
+    },
+    "type": "object",
+    "x-uipaas-type": "$ModelDrivenSelectSingle",
+    "x-ui-component": {
+      "default": {
+        "description": "下拉选择",
+        "componentName": "ModelDrivenSelectField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "当前状态",
+            "zh_CN": "当前状态",
+            "type": "i18n"
+          }
+        }
+      },
+      "Ratio": {
+        "description": "单选",
+        "componentName": "ModelDrivenRadioField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "当前状态",
+            "zh_CN": "当前状态",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "application_date": {
+    "description": "申请日期",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "Date"
+    },
+    "type": "timestamp",
+    "x-uipaas-type": "$Date",
+    "x-ui-component": {
+      "default": {
+        "description": "日期",
+        "componentName": "DateField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "DateField",
+            "zh_CN": "申请日期",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "business_interface_person": {
+    "description": "业务接口人",
+    "x-aecp": {
+      "smartObjectCode": "altun_software_copyright",
+      "multiple": false,
+      "typeCat": "BASIC",
+      "busiType": "AliEmployeeMulti"
+    },
+    "type": "array",
+    "x-uipaas-type": "$ModelDrivenEmployee",
+    "items": {
+      "x-oneapi-ref": "$AliEmployee",
+      "type": "object",
+      "$ref": "$AliEmployee"
+    },
+    "x-ui-component": {
+      "default": {
+        "description": "人员多选",
+        "componentName": "EmployeeField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "Employee Field",
+            "zh_CN": "业务接口人",
+            "type": "i18n"
+          }
+        }
+      }
+    },
+    "required": false
+  },
+  "currentPage": {
+    "description": "当前页码",
+    "x-param-biz-type": "pageCursor",
+    "type": "int64",
+    "x-ui-component": {
+      "default": {
+        "description": "输入框-整数校验",
+        "componentName": "TextField",
+        "props": {
+          "label": {
+            "use": "zh_CN",
+            "en_US": "TextField",
+            "zh_CN": "当前页码",
+            "type": "i18n"
+          }
+        }
+      }
+    }
+  }
+}
