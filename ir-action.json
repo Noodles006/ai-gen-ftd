@@ -1,0 +1,15 @@
+{
+  "id": "动作标识",
+  "title": "动作名称",
+  "action": {
+    // INNER_CREATE 新增
+    // INNER_EDIT 编辑
+    // INNER_DELETE 删除
+    // INNER_VIEW 查看
+    // OPEN_PAGE 打开页面
+    // INVOKE_API 调用API
+    // CUSTOM 自定义
+    "type": "INNER_CREATE", // INNER_CREATE、INNER_EDIT、INNER_DELETE、INNER_VIEW、OPEN_PAGE、INVOKE_API、CUSTOM
+    "data": {}
+  }
+}
