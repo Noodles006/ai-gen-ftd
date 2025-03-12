@@ -1,0 +1,2164 @@
+{
+  "uiMapping": [
+    {
+      "description": "文本",
+      "expressions": [
+        {
+          "type": "string"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "TextField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "TextField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "单行文本"
+        },
+        "LongText": {
+          "componentName": "TextField",
+          "props": {
+            "htmlType": "textarea",
+            "label": {
+              "use": "zh_CN",
+              "en_US": "TextField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "多行文本"
+        },
+        "Select": {
+          "componentName": "SelectField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "SelectField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "下拉单选"
+        },
+        "Radio": {
+          "componentName": "RadioField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "RadioField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "单选"
+        },
+        "CascadeSelect": {
+          "componentName": "CascadeSelectField",
+          "props": {
+            "hasClear": false,
+            "label": {
+              "use": "zh_CN",
+              "en_US": "CascadeSelect",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "级联单选"
+        },
+        "TreeSelect": {
+          "componentName": "TreeSelectField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "TreeSelectField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "树形单选"
+        }
+      }
+    },
+    {
+      "description": "长文本",
+      "expressions": [
+        {
+          "type": "string",
+          "x-uipaas-type": "$Textarea"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "TextField",
+          "props": {
+            "htmlType": "textarea",
+            "label": {
+              "use": "zh_CN",
+              "en_US": "TextField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "多行文本"
+        }
+      }
+    },
+    {
+      "description": "富文本",
+      "expressions": [
+        {
+          "type": "string",
+          "x-uipaas-type": "$HTML"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "EditorField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "富文本"
+        }
+      }
+    },
+    {
+      "description": "数字",
+      "expressions": [
+        {
+          "type": "number"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "NumberField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "NumberField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "数字输入框"
+        }
+      }
+    },
+    {
+      "description": "数字（整数）",
+      "expressions": [
+        {
+          "type": "int32"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "NumberField",
+          "props": {
+            "type": "inline",
+            "placeholder": {
+              "use": "zh_CN",
+              "en_US": "Please enter a number",
+              "zh_CN": "请输入整数",
+              "type": "i18n"
+            },
+            "label": {
+              "use": "zh_CN",
+              "en_US": "NumberField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "数字输入框"
+        }
+      }
+    },
+    {
+      "description": "数字（长整型）",
+      "expressions": [
+        {
+          "type": "int64"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "TextField",
+          "props": {
+            "placeholder": {
+              "use": "zh_CN",
+              "en_US": "Please enter",
+              "zh_CN": "请输入整数",
+              "type": "i18n"
+            },
+            "validation": [
+              {
+                "param": {
+                  "type": "js",
+                  "source": "function validateRule(value) {\n  if (value === '' || /^-?[1-9]\\d*$/.test(value)) {\n    return true;\n  }\n  return false;\n}",
+                  "compiled": "function main(){\n    \n    \"use strict\";\n\nvar __compiledFunc__ = function validateRule(value) {\n  if (value === '' || /^-?[1-9]\\d*$/.test(value)) {\n    return true;\n  }\n\n  return false;\n};\n    return __compiledFunc__.apply(this, arguments);\n  }",
+                  "error": {}
+                },
+                "type": "customValidate",
+                "message": {
+                  "use": "zh_CN",
+                  "en_US": "",
+                  "zh_CN": "请输入整数",
+                  "type": "i18n"
+                }
+              }
+            ],
+            "label": {
+              "use": "zh_CN",
+              "en_US": "TextField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue"
+          },
+          "description": "输入框-整数校验"
+        }
+      }
+    },
+    {
+      "description": "数字（单精度浮点）",
+      "expressions": [
+        {
+          "type": "float"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "NumberField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "NumberField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "数字输入框"
+        }
+      }
+    },
+    {
+      "description": "小数",
+      "expressions": [
+        {
+          "type": "double",
+          "x-uipaas-type": "$Decimal"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "NumberField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "NumberField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "precision": "$property.minLength",
+            "validation": [
+              {
+                "type": "maxLength",
+                "param": "$property.maxLength"
+              }
+            ]
+          },
+          "description": "数字输入框"
+        }
+      }
+    },
+    {
+      "description": "数字（双精度浮点）",
+      "expressions": [
+        {
+          "type": "double"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "TextField",
+          "props": {
+            "placeholder": {
+              "use": "zh_CN",
+              "en_US": "Please enter",
+              "zh_CN": "请输入数字",
+              "type": "i18n"
+            },
+            "validation": [
+              {
+                "param": {
+                  "type": "js",
+                  "source": "function validateRule(value) {\n  if (value === '' || /^[-+]?[0-9]+$/.test(value) || /^[-+]?[0-9]+\\.?[0-9]+$/.test(value)) {\n    return true;\n  }\n  return false;\n}",
+                  "compiled": "function main(){\n    \n    \"use strict\";\n\nvar __compiledFunc__ = function validateRule(value) {\n  if (value === '' || /^[-+]?[0-9]+$/.test(value) || /^[-+]?[0-9]+\\.?[0-9]+$/.test(value)) {\n    return true;\n  }\n\n  return false;\n};\n    return __compiledFunc__.apply(this, arguments);\n  }",
+                  "error": {}
+                },
+                "type": "customValidate",
+                "message": {
+                  "use": "zh_CN",
+                  "en_US": "",
+                  "zh_CN": "请输入数字",
+                  "type": "i18n"
+                }
+              }
+            ],
+            "label": {
+              "use": "zh_CN",
+              "en_US": "TextField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue"
+          },
+          "description": "数字输入框"
+        }
+      }
+    },
+    {
+      "description": "汇率",
+      "expressions": [
+        {
+          "type": "float",
+          "x-uipaas-type": "$Rate"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "NumberField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "NumberField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "precision": 4,
+            "validation": [
+              {
+                "type": "maxLength",
+                "param": "18"
+              }
+            ]
+          },
+          "description": "数字输入框"
+        }
+      }
+    },
+    {
+      "description": "布尔",
+      "expressions": [
+        {
+          "type": "boolean"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "RadioField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "RadioField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "dataSource": [
+              {
+                "text": {
+                  "zh_CN": "是",
+                  "en_US": "True",
+                  "type": "i18n",
+                  "use": "zh_CN"
+                },
+                "value": "1",
+                "defaultChecked": true
+              },
+              {
+                "text": {
+                  "zh_CN": "否",
+                  "en_US": "False",
+                  "type": "i18n",
+                  "use": "zh_CN"
+                },
+                "value": "0",
+                "defaultChecked": false
+              }
+            ],
+            "validation": []
+          },
+          "description": "单选（是/否）"
+        },
+        "Switch": {
+          "componentName": "SwitchField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "SwitchField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "开关"
+        }
+      }
+    },
+    {
+      "description": "日期时间",
+      "expressions": [
+        {
+          "type": "timestamp"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "DateField",
+          "props": {
+            "format": "YYYY-MM-DD HH:mm:ss",
+            "returnType": "timestamp",
+            "label": {
+              "use": "zh_CN",
+              "en_US": "DateField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "日期时间"
+        }
+      }
+    },
+    {
+      "description": "日期",
+      "expressions": [
+        {
+          "type": "timestamp",
+          "x-uipaas-type": "$Date"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "DateField",
+          "props": {
+            "format": "YYYY-MM-DD",
+            "returnType": "timestamp",
+            "label": {
+              "use": "zh_CN",
+              "en_US": "DateField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "日期"
+        }
+      }
+    },
+    {
+      "description": "时间",
+      "expressions": [
+        {
+          "type": "timestamp",
+          "x-uipaas-type": "$Time"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "TimeField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "TimeField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "时间选择"
+        }
+      }
+    },
+    {
+      "description": "时间",
+      "expressions": [
+        {
+          "type": "string",
+          "format": "time"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "TimeField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "TimeField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "时间选择"
+        }
+      }
+    },
+    {
+      "description": "日期范围",
+      "expressions": [
+        {
+          "type": "object",
+          "x-uipaas-type": "$DateRange"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "CascadeDateField",
+          "props": {
+            "format": "YYYY-MM-DD",
+            "returnType": "timestamp",
+            "label": {
+              "use": "zh_CN",
+              "en_US": "CascadeDateField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "日期范围"
+        }
+      }
+    },
+    {
+      "description": "日期时间范围",
+      "expressions": [
+        {
+          "type": "object",
+          "x-uipaas-type": "$DateTimeRange"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "CascadeDateField",
+          "props": {
+            "format": "YYYY-MM-DD HH:mm:ss",
+            "returnType": "timestamp",
+            "label": {
+              "use": "zh_CN",
+              "en_US": "CascadeDateField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "日期时间范围"
+        }
+      }
+    },
+    {
+      "description": "单选",
+      "expressions": [
+        {
+          "type": "string",
+          "enumInfo": "*"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "RadioField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "RadioField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "dataSource": "$property.enumInfo.enumItems",
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "单选（默认）"
+        },
+        "Select": {
+          "componentName": "SelectField",
+          "props": {
+            "notFoundContent": {
+              "use": "zh_CN",
+              "type": "i18n"
+            },
+            "label": {
+              "use": "zh_CN",
+              "en_US": "SelectField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "dataSource": "$property.enumInfo.enumItems",
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "下拉单选"
+        }
+      }
+    },
+    {
+      "description": "单选（对象型）",
+      "expressions": [
+        {
+          "type": "object",
+          "enumInfo": "*"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "SelectField",
+          "props": {
+            "useDetailValue": true,
+            "notFoundContent": {
+              "use": "zh_CN",
+              "type": "i18n"
+            },
+            "label": {
+              "use": "zh_CN",
+              "en_US": "SelectField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "dataSource": "$property.enumInfo.enumItems",
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "下拉单选"
+        }
+      }
+    },
+    {
+      "description": "多选",
+      "expressions": [
+        {
+          "type": "array",
+          "items.type": "string",
+          "items.enumInfo": "*"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "SelectField",
+          "props": {
+            "mode": "multiple",
+            "notFoundContent": {
+              "use": "zh_CN",
+              "type": "i18n"
+            },
+            "label": {
+              "use": "zh_CN",
+              "en_US": "SelectField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "dataSource": "$property.items.enumInfo.enumItems",
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "下拉多选（默认）"
+        },
+        "Checkbox": {
+          "componentName": "CheckboxField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "CheckboxField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "dataSource": "$property.items.enumInfo.enumItems",
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "复选框"
+        }
+      }
+    },
+    {
+      "description": "多选（对象型）",
+      "expressions": [
+        {
+          "type": "array",
+          "items.type": "object",
+          "items.enumInfo": "*"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "SelectField",
+          "props": {
+            "mode": "multiple",
+            "useDetailValue": true,
+            "notFoundContent": {
+              "use": "zh_CN",
+              "type": "i18n"
+            },
+            "label": {
+              "use": "zh_CN",
+              "en_US": "SelectField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "dataSource": "$property.items.enumInfo.enumItems",
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "下拉多选"
+        }
+      }
+    },
+    {
+      "description": "多选（动态数据）",
+      "expressions": [
+        {
+          "type": "array",
+          "items.type": "string"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "SelectField",
+          "props": {
+            "mode": "multiple",
+            "notFoundContent": {
+              "use": "zh_CN",
+              "type": "i18n"
+            },
+            "label": {
+              "use": "zh_CN",
+              "en_US": "SelectField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "下拉多选（默认）"
+        },
+        "Checkbox": {
+          "componentName": "CheckboxField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "CheckboxField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "复选框"
+        },
+        "CascadeSelect": {
+          "componentName": "CascadeSelectField",
+          "props": {
+            "multiple": true,
+            "label": {
+              "use": "zh_CN",
+              "en_US": "CascadeSelect",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "级联多选"
+        },
+        "TreeSelect": {
+          "componentName": "TreeSelectField",
+          "props": {
+            "multiple": true,
+            "label": {
+              "use": "zh_CN",
+              "en_US": "TreeSelectField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "树形多选"
+        }
+      }
+    },
+    {
+      "description": "金额",
+      "expressions": [
+        {
+          "type": "string",
+          "format": "currency"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "MoneyInputField",
+          "props": {
+            "currencyInValue": false,
+            "showCurrency": false,
+            "fixedNumber": 2,
+            "label": {
+              "use": "zh_CN",
+              "en_US": "MoneyInputField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": [
+              {
+                "type": "maxLength",
+                "param": "18"
+              }
+            ],
+            "value": ""
+          },
+          "description": "金额"
+        }
+      }
+    },
+    {
+      "description": "金额（带币种）",
+      "expressions": [
+        {
+          "type": "object",
+          "x-uipaas-type": "$MoneyCurrency"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "MoneyInputField",
+          "props": {
+            "currencyInValue": true,
+            "showCurrency": true,
+            "fixedNumber": 2,
+            "label": {
+              "use": "zh_CN",
+              "en_US": "MoneyInputField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": [
+              {
+                "type": "maxLength",
+                "param": "18"
+              }
+            ]
+          },
+          "description": "金额带币种"
+        }
+      }
+    },
+    {
+      "description": "金额范围",
+      "expressions": [
+        {
+          "type": "object",
+          "x-uipaas-type": "$MoneyRange"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "MoneyRangeField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "MoneyInputField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "showCurrency": false,
+            "currencyInValue": false,
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "金额范围"
+        }
+      }
+    },
+    {
+      "description": "金额范围（带币种）",
+      "expressions": [
+        {
+          "type": "object",
+          "x-uipaas-type": "$MoneyCurrencyRange"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "MoneyRangeField",
+          "props": {
+            "showCurrency": true,
+            "currencyInValue": true,
+            "label": {
+              "use": "zh_CN",
+              "en_US": "MoneyInputField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "金额区间带币种"
+        }
+      }
+    },
+    {
+      "description": "手机号",
+      "expressions": [
+        {
+          "type": "string",
+          "format": "tel"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "TextField",
+          "props": {
+            "validation": [
+              {
+                "type": "mobile"
+              }
+            ],
+            "label": {
+              "use": "zh_CN",
+              "en_US": "TextField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue"
+          },
+          "description": "输入框-手机号"
+        }
+      }
+    },
+    {
+      "description": "手机号",
+      "expressions": [
+        {
+          "type": "string",
+          "format": "mobile"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "TextField",
+          "props": {
+            "validation": [
+              {
+                "type": "mobile"
+              }
+            ],
+            "label": {
+              "use": "zh_CN",
+              "en_US": "TextField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue"
+          },
+          "description": "输入框-手机号"
+        }
+      }
+    },
+    {
+      "description": "邮箱",
+      "expressions": [
+        {
+          "type": "string",
+          "format": "email"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "TextField",
+          "props": {
+            "validation": [
+              {
+                "type": "email"
+              }
+            ],
+            "label": {
+              "use": "zh_CN",
+              "en_US": "TextField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue"
+          },
+          "description": "输入框-邮箱"
+        }
+      }
+    },
+    {
+      "description": "百分比",
+      "expressions": [
+        {
+          "type": "float",
+          "format": "percentage"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "NumberField",
+          "props": {
+            "precision": 2,
+            "innerAfter": {
+              "use": "zh_CN",
+              "en_US": "",
+              "zh_CN": "%",
+              "type": "i18n"
+            },
+            "validation": [
+              {
+                "param": {
+                  "type": "js",
+                  "source": "function validateRule(value) {\n  if (value === '' || /^[-+]?[0-9]+$/.test(value) || /^[-+]?[0-9]+\\.?[0-9]+$/.test(value)) {\n    return true;\n  }\n  return false;\n}",
+                  "compiled": "function main(){\n    \n    \"use strict\";\n\nvar __compiledFunc__ = function validateRule(value) {\n  if (value === '' || /^[-+]?[0-9]+$/.test(value) || /^[-+]?[0-9]+\\.?[0-9]+$/.test(value)) {\n    return true;\n  }\n\n  return false;\n};\n    return __compiledFunc__.apply(this, arguments);\n  }",
+                  "error": {}
+                },
+                "type": "customValidate",
+                "message": {
+                  "use": "zh_CN",
+                  "en_US": "",
+                  "zh_CN": "请输入数字",
+                  "type": "i18n"
+                }
+              }
+            ],
+            "label": {
+              "use": "zh_CN",
+              "en_US": "NumberField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue"
+          },
+          "description": "数字-百分比"
+        }
+      }
+    },
+    {
+      "description": "业务对象-文件",
+      "expressions": [
+        {
+          "type": "array",
+          "items.type": "object",
+          "x-uipaas-type": "$ModelDrivenFile"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "AttachmentField",
+          "props": {
+            "url": {
+              "type": "JSExpression",
+              "value": "`/md/legal/file/upload?${window.g_config && window.g_config._csrf_token_key || '_csrf'}=${window.g_config && window.g_config._csrf_token || ''}`",
+              "mock": "/md/legal/file/upload"
+            },
+            "name": "file",
+            "buttonType": "secondary",
+            "label": {
+              "use": "zh_CN",
+              "en_US": "Upload attachment",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": [],
+            "modelConfig": {
+              "x-value-out": {
+                "type": "js",
+                "source": "/**\n* 将字段组件给出的数据结构转换为视图模型中的相关字段\n* \n* @param fieldValue 字段组件数据\n* @param viewModel 视图模型协议\n* @param fieldCode 模型字段code\n*/\nfunction valueOut(fieldValue, viewModel, fieldCode) {\n  const values = {};\n\n  // 保证数据结构为数组\n  let value = fieldValue;\n  if (!Array.isArray(value)) {\n    value = value ? [value] : [];\n  }\n\n  // 提取response进行数据提交\n  value = value.map(item => {\n    return item && item.response ? item.response : item;\n  });\n\n  values[fieldCode] = value;\n  return values;\n}",
+                "compiled": "function main(){\n    \n    \"use strict\";\n\nfunction _newArrowCheck(innerThis, boundThis) { if (innerThis !== boundThis) { throw new TypeError(\"Cannot instantiate an arrow function\"); } }\nvar __compiledFunc__ =\n/**\n* 将字段组件给出的数据结构转换为视图模型中的相关字段\n* \n* @param fieldValue 字段组件数据\n* @param viewModel 视图模型协议\n* @param fieldCode 模型字段code\n*/\nfunction valueOut(fieldValue, viewModel, fieldCode) {\n  var _this = this;\n  var values = {};\n\n  // 保证数据结构为数组\n  var value = fieldValue;\n  if (!Array.isArray(value)) {\n    value = value ? [value] : [];\n  }\n\n  // 提取response进行数据提交\n  value = value.map(function (item) {\n    _newArrowCheck(this, _this);\n    return item && item.response ? item.response : item;\n  }.bind(this));\n  values[fieldCode] = value;\n  return values;\n};\n    return __compiledFunc__.apply(this, arguments);\n  }",
+                "error": {},
+                "params": {}
+              }
+            }
+          },
+          "description": "文件上传"
+        }
+      }
+    },
+    {
+      "description": "文件",
+      "expressions": [
+        {
+          "type": "array",
+          "items.type": "object",
+          "x-uipaas-type": "$File"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "AttachmentField",
+          "props": {
+            "buttonType": "secondary",
+            "label": {
+              "use": "zh_CN",
+              "en_US": "Upload attachment",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "文件上传"
+        }
+      }
+    },
+    {
+      "description": "图片（上传图片）",
+      "expressions": [
+        {
+          "type": "array",
+          "items.type": "object",
+          "x-uipaas-type": "$Picture"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "ImageField",
+          "props": {
+            "type": "card",
+            "listType": "card",
+            "label": {
+              "use": "zh_CN",
+              "en_US": "Upload image",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "图片上传"
+        }
+      }
+    },
+    {
+      "description": "业务对象-图片",
+      "expressions": [
+        {
+          "type": "array",
+          "items.type": "object",
+          "x-uipaas-type": "$ModelDrivenPicture"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "ImageField",
+          "props": {
+            "type": "card",
+            "listType": "card",
+            "url": {
+              "type": "JSExpression",
+              "value": "`/md/legal/file/upload?${window.g_config && window.g_config._csrf_token_key || '_csrf'}=${window.g_config && window.g_config._csrf_token || ''}`",
+              "mock": "/md/legal/file/upload"
+            },
+            "name": "file",
+            "label": {
+              "use": "zh_CN",
+              "en_US": "Upload image",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": [],
+            "modelConfig": {
+              "x-value-out": {
+                "type": "js",
+                "source": "/**\n* 将字段组件给出的数据结构转换为视图模型中的相关字段\n* \n* @param fieldValue 字段组件数据\n* @param viewModel 视图模型协议\n* @param fieldCode 模型字段code\n*/\nfunction valueOut(fieldValue, viewModel, fieldCode) {\n  const values = {};\n\n  // 保证数据结构为数组\n  let value = fieldValue;\n  if (!Array.isArray(value)) {\n    value = value ? [value] : [];\n  }\n\n  // 提取response进行数据提交\n  value = value.map(item => {\n    return item && item.response ? item.response : item;\n  });\n\n  values[fieldCode] = value;\n  return values;\n}",
+                "compiled": "function main(){\n    \n    \"use strict\";\n\nfunction _newArrowCheck(innerThis, boundThis) { if (innerThis !== boundThis) { throw new TypeError(\"Cannot instantiate an arrow function\"); } }\nvar __compiledFunc__ =\n/**\n* 将字段组件给出的数据结构转换为视图模型中的相关字段\n* \n* @param fieldValue 字段组件数据\n* @param viewModel 视图模型协议\n* @param fieldCode 模型字段code\n*/\nfunction valueOut(fieldValue, viewModel, fieldCode) {\n  var _this = this;\n  var values = {};\n\n  // 保证数据结构为数组\n  var value = fieldValue;\n  if (!Array.isArray(value)) {\n    value = value ? [value] : [];\n  }\n\n  // 提取response进行数据提交\n  value = value.map(function (item) {\n    _newArrowCheck(this, _this);\n    return item && item.response ? item.response : item;\n  }.bind(this));\n  values[fieldCode] = value;\n  return values;\n};\n    return __compiledFunc__.apply(this, arguments);\n  }",
+                "error": {},
+                "params": {}
+              }
+            }
+          },
+          "description": "图片上传"
+        }
+      }
+    },
+    {
+      "description": "国家",
+      "expressions": [
+        {
+          "type": "string",
+          "x-uipaas-type": "$Country"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "CountrySelectField",
+          "props": {
+            "defaultValue": "$property.defaultValue",
+            "notFoundContent": {
+              "use": "zh_CN",
+              "type": "i18n"
+            },
+            "label": {
+              "use": "zh_CN",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "validation": []
+          },
+          "description": "国家单选"
+        }
+      }
+    },
+    {
+      "description": "国家（多选）",
+      "expressions": [
+        {
+          "type": "array",
+          "items.type": "string",
+          "x-uipaas-type": "$Country"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "CountrySelectField",
+          "props": {
+            "defaultValue": "$property.defaultValue",
+            "mode": "multiple",
+            "notFoundContent": {
+              "use": "zh_CN",
+              "type": "i18n"
+            },
+            "label": {
+              "use": "zh_CN",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "validation": []
+          },
+          "description": "国家多选"
+        }
+      }
+    },
+    {
+      "description": "地区",
+      "expressions": [
+        {
+          "type": "string",
+          "x-uipaas-type": "$Region"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "CountrySelectField",
+          "props": {
+            "defaultValue": "$property.defaultValue",
+            "notFoundContent": {
+              "use": "zh_CN",
+              "type": "i18n"
+            },
+            "label": {
+              "use": "zh_CN",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "validation": []
+          },
+          "description": "地区单选"
+        }
+      }
+    },
+    {
+      "description": "地区（多选）",
+      "expressions": [
+        {
+          "type": "array",
+          "items.type": "string",
+          "x-uipaas-type": "$Region"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "CountrySelectField",
+          "props": {
+            "defaultValue": "$property.defaultValue",
+            "mode": "multiple",
+            "notFoundContent": {
+              "use": "zh_CN",
+              "type": "i18n"
+            },
+            "label": {
+              "use": "zh_CN",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "validation": []
+          },
+          "description": "地区多选"
+        }
+      }
+    },
+    {
+      "description": "对象兜底",
+      "expressions": [
+        {
+          "type": "object"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "SelectField",
+          "props": {
+            "useDetailValue": true,
+            "notFoundContent": {
+              "use": "zh_CN",
+              "type": "i18n"
+            },
+            "label": {
+              "use": "zh_CN",
+              "en_US": "SelectField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "下拉单选"
+        },
+        "TimeRange": {
+          "componentName": "CascadeDateField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "CascadeDateField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "时间日期区间"
+        },
+        "MoneyCurrency": {
+          "componentName": "MoneyInputField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "MoneyInputField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "金额带币种"
+        },
+        "MoneyRange": {
+          "componentName": "MoneyRangeField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "MoneyInputField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "金额区间带币种"
+        },
+        "AliEmployee": {
+          "componentName": "EmployeeField",
+          "props": {
+            "multiple": false,
+            "label": {
+              "use": "zh_CN",
+              "en_US": "Employee Field",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "人员搜索框"
+        }
+      }
+    },
+    {
+      "description": "对象数组（兜底）",
+      "expressions": [
+        {
+          "type": "array",
+          "items.type": "object"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "RhinoTableFormField",
+          "props": {
+            "editMode": false,
+            "behavior": "READONLY",
+            "label": {
+              "use": "zh_CN",
+              "en_US": "",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "模型驱动表格"
+        },
+        "TableField": {
+          "componentName": "RhinoTableField",
+          "props": {
+            "behavior": "READONLY",
+            "label": {
+              "use": "zh_CN",
+              "en_US": "Table Field",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "layout": "TABLE",
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "模型驱动明细"
+        },
+        "MultiSelector": {
+          "componentName": "SelectField",
+          "props": {
+            "mode": "multiple",
+            "useDetailValue": true,
+            "notFoundContent": {
+              "use": "zh_CN",
+              "type": "i18n"
+            },
+            "label": {
+              "use": "zh_CN",
+              "en_US": "SelectField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "下拉多选"
+        },
+        "File": {
+          "componentName": "AttachmentField",
+          "props": {
+            "buttonType": "secondary",
+            "label": {
+              "use": "zh_CN",
+              "en_US": "Upload attachment",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "文件上传"
+        },
+        "AliEmployee": {
+          "componentName": "EmployeeField",
+          "props": {
+            "multiple": true,
+            "label": {
+              "use": "zh_CN",
+              "en_US": "Employee Field",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "labelTipsText": {
+              "use": "zh_CN",
+              "zh_CN": "",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "人员搜索框（多选）"
+        }
+      }
+    },
+    {
+      "description": "数据字典",
+      "expressions": [
+        {
+          "type": "string",
+          "x-uipaas-type": "$DataDict"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "LegalDataDictionaryField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "TextField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "dataDictionaryType": "$property['x-aecp'].dictOptionType",
+            "validation": [],
+            "smartObjectCode": "$property['x-aecp'].smartObjectCode"
+          },
+          "description": "数据字典"
+        }
+      }
+    },
+    {
+      "description": "数据字典（多选）",
+      "expressions": [
+        {
+          "type": "string",
+          "x-uipaas-type": "$MultiDataDict"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "LegalDataDictionaryField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "TextField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "dataDictionaryType": "$property['x-aecp'].dictOptionType",
+            "smartObjectCode": "$property['x-aecp'].smartObjectCode",
+            "mode": "multiple",
+            "multiple": true,
+            "validation": []
+          },
+          "description": "数据字典"
+        }
+      }
+    },
+    {
+      "description": "公司选择",
+      "expressions": [
+        {
+          "type": "object",
+          "x-uipaas-type": "$Company"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "LegalCompanySelectField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "$property.description",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "mode": "single",
+            "validation": []
+          },
+          "description": "公司选择"
+        }
+      }
+    },
+    {
+      "description": "公司选择（多选）",
+      "expressions": [
+        {
+          "type": "array",
+          "items.type": "object",
+          "x-uipaas-type": "$CompanyMulti"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "LegalCompanySelectField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "$property.description",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "mode": "multiple",
+            "validation": []
+          },
+          "description": "公司选择"
+        }
+      }
+    },
+    {
+      "description": "关联表单",
+      "expressions": [
+        {
+          "type": "object",
+          "x-uipaas-type": "$AssociationForm"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "AssociationFormField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "TextField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "multiple": false,
+            "smartObjectCode": "$property['x-aecp'].smartObjectCode",
+            "associationForm": {
+              "smartObjectCode": "$property['x-aecp'].relatedObjectCode"
+            },
+            "validation": []
+          },
+          "description": "关联表单"
+        }
+      }
+    },
+    {
+      "description": "关联表单（多选）",
+      "expressions": [
+        {
+          "type": "array",
+          "items.type": "object",
+          "x-uipaas-type": "$AssociationForm"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "AssociationFormField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "TextField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "multiple": true,
+            "smartObjectCode": "$property['x-aecp'].smartObjectCode",
+            "associationForm": {
+              "smartObjectCode": "$property['x-aecp'].relatedObjectCode"
+            },
+            "validation": []
+          },
+          "description": "关联表单（多选）"
+        }
+      }
+    },
+    {
+      "description": "基础资料",
+      "expressions": [
+        {
+          "type": "object",
+          "x-uipaas-type": "$BaseData"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "BasicDataField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "TextField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "multiple": false,
+            "smartObjectCode": "$property['x-aecp'].smartObjectCode",
+            "associationForm": {
+              "smartObjectCode": "$property['x-aecp'].relatedObjectCode",
+              "mainFieldCode": "name", 
+              "subFieldCode": "$property['x-aecp'].subFieldCode"
+            },
+            "validation": []
+          },
+          "description": "基础资料"
+        }
+      }
+    },
+    {
+      "description": "基础资料（多选）",
+      "expressions": [
+        {
+          "type": "array",
+          "items.type": "object",
+          "x-uipaas-type": "$BaseData"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "BasicDataField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "TextField",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "defaultValue": "$property.defaultValue",
+            "multiple": true,
+            "smartObjectCode": "$property['x-aecp'].smartObjectCode",
+            "associationForm": {
+              "smartObjectCode": "$property['x-aecp'].relatedObjectCode",
+              "mainFieldCode": "name", 
+              "subFieldCode": "$property['x-aecp'].subFieldCode"
+            },
+            "validation": []
+          },
+          "description": "基础资料（多选）"
+        }
+      }
+    },
+    {
+      "description": "子表单",
+      "expressions": [
+        {
+          "type": "array",
+          "items.type": "object",
+          "x-uipaas-type": "$TableField"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "RhinoTableField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "Table Field",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "layout": "TABLE",
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "子表单"
+        }
+      }
+    },
+    {
+      "description": "模型驱动子表单",
+      "expressions": [
+        {
+          "type": "array",
+          "items.type": "object",
+          "x-uipaas-type": "$ModelDrivenTableField"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "ModelDrivenTableField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "$property.description",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "smartObjectCode": "$property['x-aecp'].smartObjectCode",
+            "modelConfig": {
+              "fieldLayout": {
+                "colspan": 4,
+                "newLine": true
+              }
+            },
+            "validation": []
+          },
+          "description": "模型驱动子表单"
+        }
+      }
+    },
+    {
+      "description": "业务对象-下拉选择",
+      "expressions": [
+        {
+          "type": "object",
+          "x-uipaas-type": "$ModelDrivenSelect"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "ModelDrivenSelectField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "$property.description",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "multiple": "$property['x-aecp'].multiple",
+            "smartObjectCode": "$property['x-aecp'].smartObjectCode",
+            "optionDefCode": "$property['x-aecp'].optionDefCode",
+            "optionDefSrcType": "$property['x-aecp'].optionDefSrcType",
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "下拉选择"
+        }
+      }
+    },
+    {
+      "description": "业务对象-下拉选择-单选",
+      "expressions": [
+        {
+          "type": "object",
+          "x-uipaas-type": "$ModelDrivenSelectSingle"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "ModelDrivenSelectField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "$property.description",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "multiple": "$property['x-aecp'].multiple",
+            "smartObjectCode": "$property['x-aecp'].smartObjectCode",
+            "optionDefCode": "$property['x-aecp'].optionDefCode",
+            "optionDefSrcType": "$property['x-aecp'].optionDefSrcType",
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "下拉选择"
+        },
+        "Ratio": {
+          "componentName": "ModelDrivenRadioField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "$property.description",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "smartObjectCode": "$property['x-aecp'].smartObjectCode",
+            "optionDefCode": "$property['x-aecp'].optionDefCode",
+            "optionDefSrcType": "$property['x-aecp'].optionDefSrcType",
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "单选"
+        }
+      }
+    },
+    {
+      "description": "业务对象-下拉选择-多选",
+      "expressions": [
+        {
+          "type": "object",
+          "x-uipaas-type": "$ModelDrivenSelectMulti"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "ModelDrivenSelectField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "$property.description",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "multiple": "$property['x-aecp'].multiple",
+            "smartObjectCode": "$property['x-aecp'].smartObjectCode",
+            "optionDefCode": "$property['x-aecp'].optionDefCode",
+            "optionDefSrcType": "$property['x-aecp'].optionDefSrcType",
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "下拉选择"
+        },
+        "Checkbox": {
+          "componentName": "ModelDrivenCheckboxField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "$property.description",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "smartObjectCode": "$property['x-aecp'].smartObjectCode",
+            "optionDefCode": "$property['x-aecp'].optionDefCode",
+            "optionDefSrcType": "$property['x-aecp'].optionDefSrcType",
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "复选框"
+        }
+      }
+    },
+    {
+      "description": "业务对象-级联选择",
+      "expressions": [
+        {
+          "type": "object",
+          "x-uipaas-type": "$ModelDrivenCascaderSelect"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "ModelDrivenCascadeSelectField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "$property.description",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "multiple": "$property['x-aecp'].multiple",
+            "smartObjectCode": "$property['x-aecp'].smartObjectCode",
+            "optionDefCode": "$property['x-aecp'].optionDefCode",
+            "optionDefSrcType": "$property['x-aecp'].optionDefSrcType",
+            "defaultValue": "$property.defaultValue",
+            "validation": []
+          },
+          "description": "级联选择"
+        }
+      }
+    },
+    {
+      "description": "业务对象-部门",
+      "expressions": [
+        {
+          "type": "string",
+          "x-uipaas-type": "$ModelDrivenDepartment"
+        }
+      ],
+      "componentInfo": {
+        "default": {
+          "componentName": "ModelDrivenDepartmentSelectField",
+          "props": {
+            "label": {
+              "use": "zh_CN",
+              "en_US": "$property.description",
+              "zh_CN": "$property.description",
+              "type": "i18n"
+            },
+            "multiple": "$property['x-aecp'].multiple",
+            "smartObjectCode": "$property['x-aecp'].smartObjectCode",
+            "defaultValue": "$property.defaultValue",
+            "validation": [],
+            "useDetailValue": true
+          },
+          "description": "部门"
+        }
+      }
+    }
+  ]
+}
