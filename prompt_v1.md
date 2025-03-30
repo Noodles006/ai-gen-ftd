@@ -20,7 +20,6 @@
 视图模型协议以字段编码 code 为key，字段描述为value。
 每个字段描述value项包含以下字段：
 - description：字段描述
-- x-aecp：字段的AECP配置
 - x-ui-component：字段的UI组件配置
 
 字段的UI组件配置 "x-ui-component" 以视图组件编码 "uiCode" 为key，组件配置为value。
